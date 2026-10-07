@@ -269,6 +269,11 @@ pyinstaller --clean --noconfirm --workpath "$env:TEMP\SteamBoost-build" SteamBoo
 > 指定 `--runtime-tmpdir` 都无效——属于环境限制，与本程序无关。
 > 文件夹版不做解压，启动更快，也没有这个问题。
 
+### 发布说明
+
+每个版本的发布说明放在 `docs\release-notes-vX.Y.md`，发 Release 时直接复制这份内容过去；
+里面同时记录该版本压缩包的 SHA256 校验值。v1.0 的那份见 [docs/release-notes-v1.0.md](docs/release-notes-v1.0.md)。
+
 ---
 
 ## 十一、许可
