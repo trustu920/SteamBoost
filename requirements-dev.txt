@@ -1,0 +1,6 @@
+# 开发/打包依赖
+# 安装： pip install -r requirements-dev.txt
+-r requirements.txt
+
+pyinstaller>=6.6        # 打包成单文件 exe
+Pillow>=10.0            # 生成程序图标（tools/make_icon.py）

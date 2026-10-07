@@ -1,0 +1,10 @@
+# SteamBoost 运行依赖（Python 3.11+，仅 Windows）
+# 安装： pip install -r requirements.txt
+PySide6>=6.6            # 界面
+psutil>=5.9             # 进程检测：Steam 与游戏是否在运行
+
+# 说明：
+#   * VDF/ACF 解析使用本项目内置解析器（steam_scanner.parse_vdf），不依赖第三方 vdf 库
+#   * 复制调用 FastCopy（fcp.exe，需本机已安装）或回退到 Windows 自带的 robocopy
+#   * 校验（可选档位）优先使用 xxhash，缺失时自动回退到标准库 hashlib
+#     如需开启哈希校验： pip install xxhash

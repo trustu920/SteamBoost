@@ -1,0 +1,35 @@
+# SteamBoost —— 版本库忽略规则
+#
+# 三条原则：
+#   1) 打包产物不进库（体积大）；
+#   2) PyInstaller 的 build 目录**必须**排除：里面的 xref HTML 逐行写着构建机的
+#      绝对路径（用户名、解释器位置），是实打实的隐私泄漏；
+#   3) 测试沙箱与截图都是运行时生成物。
+
+# ---------------- Python ----------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ---------------- 打包产物 ----------------
+dist/
+build/
+build_*/
+*.spec.bak
+*.manifest.bak
+
+# ---------------- 测试沙箱与截图 ----------------
+tests/_*sandbox/
+tests/_gui_shot.png
+tests/_*.png
+docs/_*.png
+
+# ---------------- 编辑器 / 系统 ----------------
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
