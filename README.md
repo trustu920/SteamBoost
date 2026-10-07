@@ -276,8 +276,15 @@ pyinstaller --clean --noconfirm --workpath "$env:TEMP\SteamBoost-build" SteamBoo
 本项目代码采用 **[PolyForm Noncommercial License 1.0.0](LICENSE)**：
 个人使用、研究、实验、业余爱好都可以，**商业使用不在授权范围内**。
 
-> 使用前请把 `LICENSE` 第一段的 `Required Notice: Copyright <…>` 换成你自己的署名——
-> 这是该许可要求随软件一起提供的声明。
+```
+SPDX-License-Identifier: PolyForm-Noncommercial-1.0.0
+```
+
+> **仓库侧边栏显示的是 "Other"，这是正常的**：GitHub 的许可识别只把自己那份"已知许可短名单"
+> 拿来比对，PolyForm 不在名单里（那份名单里的许可全都允许商用）。
+> 以 `LICENSE` 全文和上面这行 SPDX 标识为准。
+>
+> `LICENSE` 开头那行 `Required Notice: Copyright …` 是该许可要求随软件一起提供的署名声明。
 
 复制引擎 FastCopy 由其作者 [FastCopy Lab, LLC](https://fastcopy.jp/) 提供，
 **本程序不捆绑、不再分发**，只调用你本机已安装的副本；未安装时自动回退到 Windows 自带的 robocopy。
