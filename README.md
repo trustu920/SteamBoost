@@ -3,6 +3,9 @@
 把机械硬盘上的 Steam 游戏"借"到固态盘上玩，玩完把差异回写母本、再释放固态盘空间。
 **Steam 全程无感知**：它看到的永远是原来的路径，实际读取的是固态盘上的副本。
 
+> **下载**：[Releases](https://github.com/trustu920/SteamBoost/releases) 里的 `SteamBoost-v1.0-win64.zip`，
+> 整个文件夹解压即用，不需要安装 Python，也不需要管理员权限。
+
 ```
 加速前                                          加速后
 <母盘>:\SteamLibrary\...\common\GameDir\        <母盘>:\SteamLibrary\...\common\GameDir  ← 目录联接（Junction）
@@ -51,7 +54,7 @@
 | 操作系统 | Windows 10 / 11（需要 NTFS，目录联接只能用在本卷） |
 | 磁盘 | 一块机械盘（母盘，存游戏）+ 一块固态盘（加速盘，至少能放下要加速的游戏） |
 | Steam | 任意版本（本工具读注册表与 `libraryfolders.vdf` / `appmanifest_*.acf`） |
-| 运行方式 | 直接跑打包好的 `SteamBoost.exe`，或用 Python 3.11+ 跑源码 |
+| 运行方式 | 从 [Releases](https://github.com/trustu920/SteamBoost/releases) 下载打包好的 exe，或用 Python 3.11+ 跑源码 |
 
 **权限**：创建目录联接（`mklink /J`）**不需要管理员权限**，本工具全程普通权限运行。
 
@@ -59,13 +62,12 @@
 
 ## 三、安装与首次使用
 
-### 方式 A：直接运行 exe
+### 方式 A：下载打包好的 exe（推荐）
 
-```
-dist\SteamBoost.exe
-```
+到 **[Releases](https://github.com/trustu920/SteamBoost/releases)** 下载 `SteamBoost-v1.0-win64.zip`，
+**整个文件夹解压**到任意位置，双击里面的 `SteamBoost.exe` 即可——不需要安装 Python，也不需要管理员权限。
 
-双击即可，无需安装 Python。
+> 别只把 exe 单独拷出来：它旁边的 `_internal\` 里是 Qt 运行库，缺了会启动失败。
 
 ### 方式 B：源码运行
 
